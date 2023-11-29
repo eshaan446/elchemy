@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function startTimer() {
     clearInterval(intervalId);
-    intervalId = setInterval(updateTimer, 500);
+    intervalId = setInterval(updateTimer, 1000);
   }
 
   function updateTimer() {
