@@ -1,11 +1,10 @@
-/* Resetting default margin and padding */
 body, h1, input, button {
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,8 +14,6 @@ body {
 
 .container {
   text-align: center;
-  width: 80%;
-  max-width: 400px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -51,10 +48,9 @@ h1 {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.input-section button:hover {
+button:hover {
   background-color: #0056b3;
 }
 
@@ -67,6 +63,12 @@ h1 {
   background-color: yellow;
   color: black;
 }
+#pauseButton:hover{
+  background-color: darkorange;
+}
 #resetButton{
   background-color: red;
+}
+#resetButton:hover{
+  background-color: darkred;
 }
