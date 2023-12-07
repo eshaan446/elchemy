@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+  const hoursInput=document.getElementById('hours');
   const minutesInput = document.getElementById('minutes');
   const secondsInput = document.getElementById('seconds');
   const startButton = document.getElementById('startButton');
@@ -12,15 +13,14 @@ document.addEventListener('DOMContentLoaded', function() {
   let isPaused = false;
 
   startButton.addEventListener('click', function() {
+    let hours=parseInt(hoursInput.value) || 0;
     let minutes = parseInt(minutesInput.value) || 0;
     let seconds = parseInt(secondsInput.value) || 0;
 
-    if (seconds > 59) {
-      alert('Seconds cannot be more than 59.');
-      return;
-    }
+    
 
     if (!isPaused) {
+      minutes+=hours*60;
       totalTimeInSeconds = minutes * 60 + seconds;
       remainingTime = totalTimeInSeconds;
     }
